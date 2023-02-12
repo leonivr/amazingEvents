@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    position: relative;
+    border: solid 1px silver;
+    width: 100%;
+
+}
+
+header figure img{
+    padding: 5px;
+    width: 65px;
+}
+
+.banner>h1>span>a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.banner{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+    display: flex;
+    justify-content: center;
+    gap:50px;
+}
+
+.right,.left{
+    border-radius: 50%;
+    width: 50px;
+}
+.form-control {
+    max-width:fit-content ;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.search{
+    display: flex;
+    align-self: flex-start;
+}
+
+.principal{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:baseline;
+    align-content: space-around;
+    justify-content: space-between;
+    margin: 20px;
+    position: relative;
+    width: 100%;
+}
+
+fieldset{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    margin-left: 5px;
+}
+
+div.search{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-end;
+    position: relative;
+}
+
+.container-sm ul{
+    background-color: tomato;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container-sm{
+    margin-top: 10px;
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    right: 25px;
+}
+
+#redes>img{
+    width: 50px;
+}
+#redes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.p-3{
+    margin-left: -10px;
+    border: solid 1px;
+    width:95%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h5{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    position: relative;
+    bottom: 35px;
+}
+footer{
+    margin-left: 0;
+}
+/*----------MEDIA QUERIES----------*/
+/*PANTALLA GRANDE
+fieldset{ 
+    display: flex;
+    flex-direction: row;
+}
+.container-sm ul{
+    background-color: tomato;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+*/
