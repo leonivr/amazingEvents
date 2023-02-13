@@ -12,10 +12,10 @@
 <body>
     <div class="header">
         <header>
-            <figure>
-                <img src="./assets/Logo Amazing Events.png" alt="logo">
-            </figure>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div id="logo">
+                    <img src="./assets/Logo Amazing Events.png" alt="logo">
+                </div>
                 <div class="container-fluid">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,10 +32,10 @@
                         <a class="navbar-brand" href="#">Past Events</a>
                       </li>
                       <li class="nav-item">
-                        <a class="navbar-brand">Contact</a>
+                        <a class="navbar-brand" href="#">Contact</a>
                       </li>
                       <li class="nav-item">
-                        <a class="navbar-brand">Stats</a>
+                        <a class="navbar-brand" href="#">Stats</a>
                       </li>
                     </ul>
                   </div>
@@ -45,7 +45,7 @@
     </div>
     <div class="banner">
         <button class="left"><span>❮</span></button>
-        <h1><span class="badge bg-secondary">Home</span></h1>
+        <h1>Home</h1>
         <button class="right"><span>❯</span></button>
     </div>
     <div class="principal">
@@ -74,39 +74,55 @@
                     </label>
                     <div class="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                              </svg>
+                        </button>
                     </div>  
                 </fieldset>
             </form>
             <div class="container-sm">
                 <ul class="list-group list-group-horizontal">
                     <li class="list-group-item">
-                        <figure>
-                            <img src="./assets/Cinema.jpg" alt="cinema">
-                        </figure>
-                        <h2>CINEMA</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora in eveniet vitae nobis deleniti omnis voluptatum maxime repellendus eius hic, adipisci non quod aliquam consequatur doloremque distinctio dignissimos nesciunt.</p>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/Cinema.jpg" class="card-img-top" alt="cinema">
+                            <div class="card-body">
+                              <h5 class="card-title">Cinema</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item">
-                        <figure>
-                            <img src="./assets/Cinema.jpg" alt="cinema">
-                        </figure>
-                        <h2>CINEMA</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora in eveniet vitae nobis deleniti omnis voluptatum maxime repellendus eius hic, adipisci non quod aliquam consequatur doloremque distinctio dignissimos nesciunt.</p>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/Food_Fair.jpg" class="card-img-top" alt="foodfair">
+                            <div class="card-body">
+                              <h5 class="card-title">Food Fair</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item">
-                        <figure>
-                            <img src="./assets/Cinema.jpg" alt="cinema">
-                        </figure>
-                        <h2>CINEMA</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora in eveniet vitae nobis deleniti omnis voluptatum maxime repellendus eius hic, adipisci non quod aliquam consequatur doloremque distinctio dignissimos nesciunt.</p>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/Costume_Party.jpg" class="card-img-top" alt="costumeparty">
+                            <div class="card-body">
+                              <h5 class="card-title">Costume Party</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="list-group-item">
-                        <figure>
-                            <img src="./assets/Cinema.jpg" alt="cinema">
-                        </figure>
-                        <h2>CINEMA</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora in eveniet vitae nobis deleniti omnis voluptatum maxime repellendus eius hic, adipisci non quod aliquam consequatur doloremque distinctio dignissimos nesciunt.</p>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/Marathon.jpg" class="card-img-top" alt="marathon">
+                            <div class="card-body">
+                              <h5 class="card-title">Marathon</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
                     </li>
                   </ul>
             </div>
@@ -118,7 +134,9 @@
                     <img src="./assets/facebook.png" alt="facebook">
                     <img src="./assets/whatsapp.png" alt="whatsapp">    
                 </div>
-                <h5>Cohort</h5>
+                <div id="cohort">
+                    <h5>Cohort</h5>
+                </div>
             </footer>
         </div>
     </div>

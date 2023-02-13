@@ -1,39 +1,53 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .header {
     position: relative;
     border: solid 1px silver;
+    display: block;
     width: 100%;
-
 }
 
-header figure img{
+nav > div> img {
     padding: 5px;
-    width: 65px;
+    width: 100px;
+    margin-left:15px;
+    display:inline-block;
 }
 
-.banner>h1>span>a{
+#logo{
+    display: block;
+    width: 100%;
+}
+.banner>h1>span>a {
     text-decoration: none;
     color: aliceblue;
 }
 
-.banner{
+.banner {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+    background-color:#25cff2;
     display: flex;
     justify-content: center;
-    gap:50px;
+    gap: 80px;
+    margin-top:2px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    border: solid 1px silver;
 }
 
-.right,.left{
+.right,
+.left {
     border-radius: 50%;
     width: 50px;
 }
+
 .form-control {
-    max-width:fit-content ;
+    max-width: fit-content;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -46,18 +60,20 @@ header figure img{
     -moz-appearance: none;
     appearance: none;
     border-radius: 0.375rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    /*display: unset;*/
 }
-.search{
+
+.search {
     display: flex;
     align-self: flex-start;
 }
 
-.principal{
-    display:flex;
+.principal {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items:baseline;
+    align-items: baseline;
     align-content: space-around;
     justify-content: space-between;
     margin: 20px;
@@ -65,7 +81,7 @@ header figure img{
     width: 100%;
 }
 
-fieldset{ 
+fieldset {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -74,74 +90,132 @@ fieldset{
     width: 100%;
 }
 
-main{
+main {
     width: 100%;
     margin-left: 5px;
 }
 
-div.search{
-    display:flex;
+div.search {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content:flex-end;
+    align-content: flex-end;
     position: relative;
 }
 
-.container-sm ul{
-    background-color: tomato;
+.container-sm ul {
+
     justify-content: space-around;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.container-sm{
+
+.container-sm {
     margin-top: 10px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     position: relative;
     right: 25px;
 }
 
-#redes>img{
-    width: 50px;
-}
-#redes{
+footer{
     display: flex;
+    align-items: center;
+}
+#redes {
+    display: inline-block;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
+    width: 100%;
 }
-
-.p-3{
+#cohort{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.p-3 {
     margin-left: -10px;
     border: solid 1px;
-    width:95%;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-h5{
+/*h5 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 200px;
     position: relative;
     bottom: 35px;
-}
-footer{
+}*/
+
+footer {
     margin-left: 0;
 }
+
+.btn.btn-outline-success {
+    display: flex;
+}
+
+.input-icon {
+    display: flex;
+    align-self: center;
+    color: #191919;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+}
+
+h4 {
+    display: inline-flex;
+    width: 80%;
+}
+
+.container-fluid {
+    display: inline;
+    
+}
+
+/*figure {
+    margin: unset!important;
+    width: 150%;
+}*/
+
+ul > li.nav-item{
+    border: solid 2px gray;
+    background-color: springgreen;
+    margin: 10px;
+    padding: 0px;
+    font-weight: bold;
+    display: flex;
+    width: fit-content;
+}
+.navbar-brand{
+    margin-left: 10px;
+    font-size: medium!important;  
+}
+
+#redes>img{
+    width: 40px;
+    margin: 10px;
+}
+
 /*----------MEDIA QUERIES----------*/
-/*PANTALLA GRANDE
-fieldset{ 
-    display: flex;
-    flex-direction: row;
-}
-.container-sm ul{
-    background-color: tomato;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-*/
+/*PANTALLA GRANDE*/
+
+/*@media screen and (min-width:700px)  {
+    .container-sm ul{
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    footer > h5 {
+        display: inline-flex;
+        position: relative;
+    }   
+}*/
