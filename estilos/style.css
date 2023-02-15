@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    overflow-x: hidden;
+    overflow-y: visible;
+    scroll-behavior:smooth;
+}
 .header {
     position: relative;
     border: solid 1px silver;
@@ -14,7 +18,7 @@
 nav > div> img {
     padding: 5px;
     width: 100px;
-    margin-left:15px;
+    margin-left:30px;
     display:inline-block;
 }
 
@@ -31,13 +35,14 @@ nav > div> img {
     --bs-bg-opacity: 1;
     background-color:#25cff2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
     margin-top:2px;
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
-    border: solid 1px silver;
+    border: solid 1px black;
 }
 
 .right,
@@ -45,7 +50,10 @@ nav > div> img {
     border-radius: 50%;
     width: 50px;
 }
-
+.left>a,.right>a{
+    font-size:x-large;
+    text-decoration: none;
+}
 .form-control {
     max-width: fit-content;
     padding: 0.375rem 0.75rem;
@@ -85,14 +93,14 @@ fieldset {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     position: relative;
     width: 100%;
 }
 
 main {
     width: 100%;
-    margin-left: 5px;
+    margin-left: 30px;
 }
 
 div.search {
@@ -101,6 +109,7 @@ div.search {
     flex-wrap: wrap;
     align-content: flex-end;
     position: relative;
+    margin-left: 60px;
 }
 
 .container-sm ul {
@@ -141,6 +150,7 @@ footer{
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-right: 30px;
 }
 
 /*h5 {
@@ -198,11 +208,51 @@ ul > li.nav-item{
     font-size: medium!important;  
 }
 
-#redes>img{
+#redes{
+    display: flex;
+    gap: 15px;
+}
+.redes>a>img{
     width: 40px;
-    margin: 10px;
+}
+a.active{
+    color:blue;
 }
 
+#formulario{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#nombre,#email,#message{
+    display: block;
+}
+#fieldset1{
+    flex-direction: column;
+}
+#fieldset2{
+    margin-top: 15px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input#submit{
+    background-color: #25cff2;
+    border:solid black;
+    width: 90px;
+    align-self: flex-end;
+    margin: 15px;
+    font-weight: bold;
+}
+table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
 /*----------MEDIA QUERIES----------*/
 /*PANTALLA GRANDE*/
 
@@ -219,3 +269,10 @@ ul > li.nav-item{
         position: relative;
     }   
 }*/
+
+@media screen and (min-width:250px) and (max-width:500px){
+
+    .banner{
+        gap: 30px;
+    }
+}
