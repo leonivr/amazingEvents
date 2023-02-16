@@ -36,7 +36,7 @@ nav > div> img {
     background-color:#25cff2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 80px;
     margin-top:2px;
     padding-top: 50px;
@@ -50,9 +50,11 @@ nav > div> img {
     border-radius: 50%;
     width: 50px;
 }
-.left>a,.right>a{
-    font-size:x-large;
+a.left,a.right{
+    font-size:xx-large;
     text-decoration: none;
+    align-self:center;
+
 }
 .form-control {
     max-width: fit-content;
@@ -74,6 +76,7 @@ nav > div> img {
 
 .search {
     display: flex;
+    flex-direction: row;
     align-self: flex-start;
 }
 
@@ -87,6 +90,8 @@ nav > div> img {
     margin: 20px;
     position: relative;
     width: 100%;
+    background-color:white;
+    padding-top: 20px;
 }
 
 fieldset {
@@ -145,7 +150,7 @@ footer{
     margin-right: 100px;
 }
 .p-3 {
-    margin-left: -10px;
+    /*margin-left: -10px;*/
     border: solid 1px;
     width: 100%;
     flex-direction: row;
@@ -164,6 +169,7 @@ footer{
 
 footer {
     margin-left: 0;
+    margin-bottom: 5px;
 }
 
 .btn.btn-outline-success {
@@ -249,9 +255,73 @@ input#submit{
 table{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
     margin-top:20px;
     margin-bottom: 20px;
+    
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color:black!important;
+    border-style: solid;
+    border-width: 0px;
+}
+table th, td{
+    color:#191919;
+}
+form{
+    width: fit-content;
+    align-items: center;
+}
+.boton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+  }
+
+  div.col{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+.detalles{
+    margin-left: unset;
+}
+.col>img{
+    object-fit: contain;/**/
+    margin-right: 40px;
+}
+
+#detalles{  
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.principal-details{
+    background-color: springgreen;
+    /*margin-right: 20px;*/
+    display: flex;
+    flex-direction: row;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+.principal-upcoming{
+    background-color: turquoise;
+    padding-top:10px;
+}
+.principal-contact{
+    background-color:tomato;
+    padding-top:10px;
+}
+form fieldset label{
+    font-weight: bold;
 }
 /*----------MEDIA QUERIES----------*/
 /*PANTALLA GRANDE*/

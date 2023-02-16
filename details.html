@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Details</title>
     <link rel="shortcut icon" href="./assets/Logo_Amazing_Events.png" type="image/x-icon">
     <link rel="stylesheet" href="./estilos/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -32,10 +32,10 @@
                         <a class="navbar-brand" href="./pastEvents.html">Past Events</a>
                       </li>
                       <li class="nav-item">
-                        <a class="navbar-brand  active" href="./contact.html">Contact</a>
+                        <a class="navbar-brand" href="./contact.html">Contact</a>
                       </li>
                       <li class="nav-item">
-                        <a class="navbar-brand" href="./stats.html">Stats</a>
+                        <a class="navbar-brand active" href="./stats.html">Stats</a>
                       </li>
                     </ul>
                   </div>
@@ -44,50 +44,42 @@
         </header>
     </div>
     <div class="banner">
-            <a class="left boton" href="./pastEvents.html">❮</a>
-        <h1>Contact us</h1>
-            <a class="right boton" href="./stats.html">❯</a>
+            <a class="left boton" href="./contact.html">❮</a>
+        <h1>Details</h1>
+            <a class="right boton" href="./home.html">❯</a>
     </div>
-    <div class="principal-contact">
-        <main id="formulario">
-            <form action="./">
-                <fieldset id="fieldset1">
-                    <label for="nombre">
-                        Name:    
-                        <input type="text" name="nombre" id="nombre">
-                    </label>
-                    <label for="email">
-                        Email:    
-                        <input type="text" name="email" id="email">
-                    </label>
-                </fieldset>
-                <fieldset id="fieldset2">
-                    <label for="message">
-                        Message:
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                    </label>
-                </fieldset>
-                <input type="submit" value="submit" id="submit">
-            </form>
+    <div class="principal-details">
+        <main id="detalles">
+                  <div class="img-cinema">
+                    <img src="./assets/Cinema.jpg" class="card-img-top" alt="cinema">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Cinema</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam temporibus, minus sequi quas et dolore nobis necessitatibus minima labore veniam nostrum quae, voluptate ex amet enim, rerum magnam exercitationem nihil.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam temporibus, minus sequi quas et dolore nobis necessitatibus minima labore veniam nostrum quae, voluptate ex amet enim, rerum magnam exercitationem nihil.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam temporibus, minus sequi quas et dolore nobis necessitatibus minima labore veniam nostrum quae, voluptate ex amet enim, rerum magnam exercitationem nihil.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+              
         </main>
-        <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">
-            <footer>
-                <div id="redes">
-                    <div class="redes">
-                        <a href="http://www.instagram.com"><img src="./assets/insragram.png" alt="instagram"></a>
-                    </div>
-                    <div class="redes">
-                        <a href="http://www.facebook.com"><img src="./assets/facebook.png" alt="facebook"></a>
-                    </div>
-                    <div class="redes">
-                        <a href="https://web.whatsapp.com/"><img src="./assets/whatsapp.png" alt="whatsapp"></a>
-                    </div>
+    </div>
+    <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">
+        <footer id="footer-details">
+            <div id="redes">
+                <div class="redes">
+                    <a href="http://www.instagram.com"><img src="./assets/insragram.png" alt="instagram"></a>
                 </div>
-                <div id="cohort">
-                    <h5>Cohort</h5>
+                <div class="redes">
+                    <a href="http://www.facebook.com"><img src="./assets/facebook.png" alt="facebook"></a>
                 </div>
-            </footer>
-        </div>
+                <div class="redes">
+                    <a href="https://web.whatsapp.com/"><img src="./assets/whatsapp.png" alt="whatsapp"></a>
+                </div>
+            </div>
+            <div id="cohort">
+                <h5>Cohort</h5>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
