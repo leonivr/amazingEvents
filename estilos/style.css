@@ -87,13 +87,15 @@ a.left,a.right{
     align-items: baseline;
     align-content: space-around;
     justify-content: space-between;
-    margin: 20px;
+    margin-top: 20px;
     position: relative;
     width: 100%;
-    background-color:white;
+    background-color:rgb(204, 223, 220);
     padding-top: 20px;
 }
-
+.mb-2{
+    margin-top: 34px;
+}
 fieldset {
     display: flex;
     flex-direction: row;
@@ -106,6 +108,7 @@ fieldset {
 main {
     width: 100%;
     margin-left: 30px;
+    padding-bottom: 30px;
 }
 
 div.search {
@@ -258,7 +261,13 @@ table{
     align-items:flex-start;
     margin-top:20px;
     margin-bottom: 20px;
+    align-self: center;
     
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 tbody, td, tfoot, th, thead, tr {
     border-color:black!important;
@@ -318,7 +327,7 @@ form{
 }
 .principal-contact{
     background-color:tomato;
-    padding-top:10px;
+    padding-top:30px;
 }
 form fieldset label{
     font-weight: bold;
