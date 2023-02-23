@@ -7,16 +7,8 @@ for (let event of data.events) {
     if (eventDate < currentDate) {
         pastEvents += crearCard(event);
         console.log('pasado');
-    }else{
-        /*console.log("futuro");*/
     }
 }
 console.log(pastEvents);
 
-function crearCard(event){
-    return `<div class="card">
-    <img src="${event.image}" alt="">
-    <h3>${event.name}</h3>
-    <p>${event.description}</p>
-    </div>`
-  }
+document.querySelector('ul.list-group').innerHTML=pastEvents;
