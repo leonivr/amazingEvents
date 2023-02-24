@@ -11,7 +11,6 @@ for (let event of data.events) {
 document.querySelector('ul.list-group').innerHTML=Events;
 
 
-
   /*----------DOM*----------*/
 //seleccionar elementos//
   /*let divRedes = document.getElementById("redes");

@@ -6,7 +6,7 @@ for (let event of data.events) {
     console.log(eventDate);
     if (eventDate < currentDate) {
         pastEvents += crearCard(event);
-        console.log('pasado');
+        //console.log('pasado');
     }
 }
 console.log(pastEvents);

@@ -259,7 +259,7 @@ table{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    margin-top:20px;
+    margin-top:0px;
     margin-bottom: 20px;
     align-self: center;
     
@@ -326,12 +326,46 @@ form{
     padding-top:10px;
 }
 .principal-contact{
-    background-color:tomato;
+    background-color:rgb(204, 223, 220);
     padding-top:30px;
+}
+.principal-stats{
+    background-color:rgb(204, 223, 220);
+}
+.table{
+    padding-top:40px;
 }
 form fieldset label{
     font-weight: bold;
 }
+
+.btn-primary{
+    width:fit-content;
+    display:flex!important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: end;
+}
+
+#detalles > div.img-cinema {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-right: 25px;
+}
+
+div.card{
+    height: 100%!important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: var(--bs-card-border-width) solid;
+    
+}
+.card>img{
+    height:200px;
+    object-fit: cover;
+}
+
 /*----------MEDIA QUERIES----------*/
 /*PANTALLA GRANDE*/
 
