@@ -7,6 +7,6 @@ for (let event of data.events) {
         upcomingEvents += crearCard(event);
     }
 }
-console.log(upcomingEvents);
+//console.log(upcomingEvents);
 
 document.querySelector('ul.list-group').innerHTML=upcomingEvents;
