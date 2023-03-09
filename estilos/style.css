@@ -77,7 +77,8 @@ a.left,a.right{
 .search {
     display: flex;
     flex-direction: row;
-    align-self: flex-start;
+    /*align-self: flex-start;*/
+    position: relative;
 }
 
 .principal {
@@ -114,10 +115,10 @@ main {
 div.search {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-end;
+    /*flex-wrap: wrap;*/
+    align-content: flex-start;
     position: relative;
-    margin-left: 60px;
+    /*margin-left: 60px;*/
 }
 
 .container-sm ul {
@@ -177,6 +178,8 @@ footer {
 
 .btn.btn-outline-success {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .input-icon {
@@ -244,8 +247,11 @@ a.active{
     margin-top: 15px;
 }
 form{
+    width: fit-content;
+    align-items: baseline;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 input#submit{
     background-color: #25cff2;
@@ -366,6 +372,46 @@ div.card{
     object-fit: cover;
 }
 
+.card-detail>img{
+    /*height:400px;*/
+    object-fit: cover;
+    display: flex;
+    
+    align-self: center;
+    border: solid red 2px;
+}
+.card-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:20px;
+    object-fit: cover;
+}
+#detalles{
+    margin:unset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card-body.details{
+    background-color: #007bff;
+    border:solid grey 2px;
+    display: flex;
+    text-align: center;
+    color: #191919;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin:2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.btn.btn-outline-success>p{
+    color:rgb(255, 0, 0);
+}
 /*----------MEDIA QUERIES----------*/
 /*PANTALLA GRANDE*/
 

@@ -180,8 +180,26 @@ let data = {
           <h5 class="card-title">${event.name}</h5>
           <p class="card-text">${event.description}</p>
           <span>Price: $${event.price}</span>
-          <a href="./details.html" class="btn btn-primary">Ver más</a>
+          <a href="./details.html?id=${event._id}" class="btn btn-primary">Ver más</a>
         </div>
     </div>
 </li>`
   }
+
+  /*----------categorias----------*/ 
+  let categorias = [];
+
+  for (let event of data.events){
+    if(!categorias.includes(event.category)){
+      categorias.push(event.category);
+    }
+  }
+  //console.log(categorias);
+  
+  let htmlCategorias="";
+  categorias.map(cat => {
+    htmlCategorias+=`<label for="${cat}">
+    <input type="checkbox" name="category" id="${cat}" value="${cat}">
+    ${cat}
+    </label>`
+  });
