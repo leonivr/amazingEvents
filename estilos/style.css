@@ -94,7 +94,7 @@ a.left,a.right{
     padding-top: 30px;
 }
 .mb-2{
-    margin-top: 34px;
+    margin-top:0; 
 }
 fieldset {
     display: flex;
@@ -105,19 +105,19 @@ fieldset {
     width: 100%;
 }
 
-main {
+#main-contact {
     width: 100%;
     margin-left: 30px;
     padding-bottom: 30px;
+    display: grid;
 }
 
 div.search {
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;*/
-    align-content: flex-start;
+    /*flex-wrap: wrap;ver*/
     position: relative;
-    /*margin-left: 60px;*/
+    margin-right: 4.5rem;
 }
 
 .container-sm ul {
@@ -238,6 +238,8 @@ a.active{
 }
 #nombre,#email,#message{
     display: block;
+    width: 250px;
+    border: solid grey 2px;
 }
 #fieldset1{
     flex-direction: column;
@@ -253,7 +255,6 @@ form{
     flex-wrap: nowrap;
 }
 input#submit{
-    background-color: #25cff2;
     border:solid black;
     width: 90px;
     align-self: flex-end;
@@ -340,6 +341,7 @@ form{
 }
 .table{
     padding-top:40px;
+    padding-bottom:40px;
 }
 form fieldset label{
     font-weight: bold;
@@ -416,7 +418,12 @@ div.card{
 #formulario{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    position: relative;
+    justify-self: center;
+}
+
+fieldset{
+    margin-left:20px!important;
 }
 /*----------MEDIA QUERIES----------*/
 /*PANTALLA GRANDE*/
