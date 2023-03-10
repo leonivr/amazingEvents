@@ -1,4 +1,15 @@
-let data = {
+async function traerDatos() {
+  await fetch("https://mindhub-xj03.onrender.com/api/amazing")
+  .then(respuesta => respuesta.json())
+  .then(json => data=json)
+  localStorage.setItem("data", JSON.stringify(data));
+}
+traerDatos();
+let data= localStorage.getItem("data");
+//console.log(data);
+data = JSON.parse(data);
+
+/*let data = {
   "currentDate": "2022-01-01",
     events: [
       {
@@ -170,10 +181,28 @@ let data = {
         "price":250
       }
     ]
-  };
+  };*/
+  /*----------categorias----------*/
+let categorias = [];
 
-  function crearCard(event){
-    return `<li class="list-group-item">
+for (let event of data.events) {
+  if (!categorias.includes(event.category)) {
+    categorias.push(event.category);
+  }
+}
+//console.log(categorias);
+
+let htmlCategorias = "";
+categorias.map(cat => {
+  htmlCategorias += `<label for="${cat}">
+    <input type="checkbox" name="category" id="${cat}" value="${cat}">
+    ${cat}
+    </label>`
+});
+
+
+function crearCard(event) {
+  return `<li class="list-group-item">
     <div class="card" style="width: 18rem;">
         <img src="${event.image}" class="card-img-top" alt="">
         <div class="card-body">
@@ -184,22 +213,5 @@ let data = {
         </div>
     </div>
 </li>`
-  }
+}
 
-  /*----------categorias----------*/ 
-  let categorias = [];
-
-  for (let event of data.events){
-    if(!categorias.includes(event.category)){
-      categorias.push(event.category);
-    }
-  }
-  //console.log(categorias);
-  
-  let htmlCategorias="";
-  categorias.map(cat => {
-    htmlCategorias+=`<label for="${cat}">
-    <input type="checkbox" name="category" id="${cat}" value="${cat}">
-    ${cat}
-    </label>`
-  });

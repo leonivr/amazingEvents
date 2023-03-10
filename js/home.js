@@ -1,3 +1,10 @@
+/*let data= localStorage.getItem("data");
+console.log(data);
+data = JSON.parse(data);*/
+
+
+/*----------------------------------------------------------*/ 
+//let htmlCategorias ="";
 document.querySelector('fieldset').innerHTML=htmlCategorias;
 let Events = "";
 for (let event of data.events) {
