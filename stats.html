@@ -50,76 +50,48 @@
     </div>
     <div class="principal-stats">
         <main>
-          <table class="table table-bordered">
-            <tr>
-              <th colspan="3">Events Statistics</th>
-            </tr>
-            <tr>
-              <td>Events with the highest percentage of atendance</td>
-              <td>Events with the lowest percentage of attendance</td>
-              <td>Event with the larger capacity</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan="3">Upcoming events statistics by category</th>
-            </tr>
-            <tr>
-              <td>Categories</td>
-              <td>Revenues</td>
-              <td>Percentage of attendance</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan="3">Past events statistics by category</th>
-            </tr>
-            <tr>
-              <td>Categories</td>
-              <td>Revenues</td>
-              <td>Percentage of attendance</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+          <table class="table table-secondary table-bordered">
+              <tr>
+                <th colspan="3">Events Statistics</th>
+              </tr>
+              <tr>
+                <th>Events with the highest percentage of attendance</th>
+                <th>Events with the lowest percentage of attendance</th>
+                <th>Event with the larger capacity</th>
+              </tr>
+              <tr>
+                <td id="highest-att"></td>
+                <td id="lowest-att"></td>
+                <td id="capacity"></td>
+              </tr>
+          </table>
+          <table class="table table-secondary table-bordered">
+            <thead>
+              <tr>
+                <th colspan="3">Upcoming events statistics by category</th>
+              </tr>
+              <tr>
+                <th>Categories</th>
+                <th>Revenues</th>
+                <th>Percentage of attendance</th>
+              </tr>
+            </thead>
+            <tbody id="upcoming"></tbody>
+          </table>
+          <table class="table table-secondary table-bordered" >
+            <thead>
+              <tr>
+                <th colspan="3">Past events statistics by category</th>
+              </tr>
+              <tr>
+                <th>Categories</th>
+                <th>Revenues</th>
+                <th>Percentage of attendance</th>
+              </tr>
+            </thead>
+            <tbody id="past">
+
+            </tbody>
           </table>
         </main>
     </div>
@@ -142,5 +114,8 @@
       </footer>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/stats.js"></script>
+    <script></script>
 </body>
 </html>

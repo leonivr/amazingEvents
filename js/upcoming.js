@@ -11,18 +11,51 @@ for (let event of data.events) {
 
 document.querySelector('ul.list-group').innerHTML=upcomingEvents;
 
-let upcomingList = [];
-for (let event of data.events) {
-    let currentDate = new Date(data.currentDate);
-    let eventDate = new Date(event.date);
-    if (eventDate > currentDate) {
-        upcomingList.push(event);
-    }
-}
-console.log(upcomingList);
 
 let listCategorias2 = document.querySelectorAll("label input[type='checkbox']");
 
+listCategorias2.forEach(checkbox =>{
+  checkbox.addEventListener("change", () =>{
+    renderSearch();
+  })
+})
+/**----------filtros cruzados----------**/
+let cajabusqueda = document.querySelector('input[name=search]');
+cajabusqueda.addEventListener("input", () =>{
+  renderSearch();
+});
+
+function renderSearch(){
+  let htmlResultados="";
+  let chequeados = getChequeados();
+  console.log(chequeados);
+  let textoIngresado = cajabusqueda.value;
+  let resultados = upcomingList.filter(evento =>
+    evento.description.toLowerCase().includes(textoIngresado.toLowerCase()) || evento.name.toLowerCase().includes(textoIngresado.toLowerCase()));
+    if(chequeados.length > 0 ){
+      resultados=resultados.filter(evento => {
+        let filtro = false;
+        if(chequeados.includes(evento.category)){
+          filtro=true;
+          console.log(evento.name)
+          htmlResultados+=crearCard(evento);
+          document.querySelector('ul.list-group').innerHTML=htmlResultados;
+        }
+        console.log(resultados);
+        return filtro;
+      })
+    }  
+}
+function getChequeados(){
+  let catchecked= [];
+  listCategorias2.forEach(checkbox =>{
+    if(checkbox.checked){
+      catchecked.push(checkbox.value)
+    }
+  })
+  return catchecked;
+}
+/*filtro sin cruzar */
   listCategorias2.forEach(categoria => {
     categoria.onclick= () => {    
       let htmlResultados = "";
@@ -46,12 +79,13 @@ let listCategorias2 = document.querySelectorAll("label input[type='checkbox']");
     }
   });
 
-/*--SEARCH--*/ 
+/*--SEARCH--
   
 let btnbusqueda =document.querySelector('.btn.btn-outline-success');
-btnbusqueda.onclick= (e) =>{
+btnbusqueda.disabled=true;
+let cajabusqueda = document.querySelector('.form-control');
+cajabusqueda.onkeyup= (e) =>{
   e.preventDefault();
-  let cajabusqueda = document.querySelector('.form-control');
   let texto=cajabusqueda.value;
   let html="";
   for(let evento of upcomingList){
@@ -64,11 +98,11 @@ btnbusqueda.onclick= (e) =>{
   }
   if(html==""){
     document.querySelector('.search').innerHTML=`<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">
+      <button class="btn btn-outline-success" type="submit" disabled>
       <p>Sin resultados, pruebe modificando los filtros</p>
           <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
             </svg>
       </button>`
   }
-}
+}*/ 
