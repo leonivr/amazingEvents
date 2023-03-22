@@ -70,10 +70,10 @@ for(let cat of categorias){
       }
    }
 }
-/*function tableUpcoming(eventList,selector){
+function tableUpcoming(eventList,selector){
    let tableBodyHTML="";
    categorias.forEach(categoria => {
-      let filteredEvents = getEventByCategory(upcomingList, categoria);
+      let filteredEvents = getEventByCategory(eventList, categoria);
       let ingresos = getIngresosUpcoming(filteredEvents);
       console.log("Categoria: "+ categoria)
       console.log("Ingresos: $" + ingresos);
@@ -87,27 +87,9 @@ for(let cat of categorias){
    });
    console.log(tableBodyHTML);
    //document.getElementById(selector).innerHTML=tableBodyHTML;
-   document.querySelector("#upcoming").innerHTML = tableBodyHTML;
-//}
-//tableUpcoming(upcomingList,"#upcoming");*/
-
-/*ultimo intento o me pego un tiro*/ 
-let tableBodyHTML="";
-   categorias.forEach(categoria => {
-      let filteredEvents = getEventByCategory(upcomingList, categoria);
-      let ingresos = getIngresosUpcoming(filteredEvents);
-      console.log("Categoria: "+ categoria)
-      console.log("Ingresos: $" + ingresos);
-      let porcentajeAsist = getPorcentajeUpcoming(filteredEvents);
-      console.log("Porcentaje Asistencia: " + porcentajeAsist + "%");
-      tableBodyHTML += `<tr>
-      <td>${categoria}</td>
-      <td>$${ingresos}</td>
-      <td>${porcentajeAsist}%</td>
-    </tr>`
-   });
-   console.log(tableBodyHTML);
-   document.querySelector("#upcoming").innerHTML=tableBodyHTML;
+   document.querySelector(selector).innerHTML = tableBodyHTML;
+}
+tableUpcoming(upcomingList,"#upcoming");
 
 function getEventByCategory(events, categoria){
    let EventosporCategoria = [];
