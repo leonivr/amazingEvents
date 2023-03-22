@@ -71,25 +71,15 @@ a.left,a.right{
     appearance: none;
     border-radius: 0.375rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    /*display: unset;*/
 }
 
 .search {
     display: flex;
     flex-direction: row;
-    /*align-self: flex-start;*/
     position: relative;
 }
 
 .principal {
-    /*display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    align-content: space-around;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;*/
     background-color:rgb(204, 223, 220);
     padding-top: 30px;
 }
@@ -115,7 +105,6 @@ fieldset {
 div.search {
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;ver*/
     position: relative;
     margin-right: 4.5rem;
 }
@@ -132,7 +121,6 @@ div.search {
     display: flex;
     flex-direction: row;
     position: relative;
-    /*right: 25px;*/
 }
 
 footer{
@@ -152,7 +140,6 @@ footer{
     margin-right: 100px;
 }
 .p-3 {
-    /*margin-left: -10px;*/
     border: solid 1px;
     width: 100%;
     flex-direction: row;
@@ -187,13 +174,7 @@ h4 {
 
 .container-fluid {
     display: inline;
-    
 }
-
-/*figure {
-    margin: unset!important;
-    width: 150%;
-}*/
 
 ul > li.nav-item{
     border: solid 2px gray;
@@ -251,20 +232,12 @@ input#submit{
     margin: 15px;
     font-weight: bold;
 }
-table{
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    margin-top:0px;
-    margin-bottom: 20px;
-    align-self: center;
-    
-}
-.table{
-    display: flex;
-    flex-direction: row;
+
+main#stats{
+    display:grid; 
     justify-content: center;
 }
+
 tbody, td, tfoot, th, thead, tr {
     border-color:black!important;
     border-style: solid;
@@ -273,6 +246,7 @@ tbody, td, tfoot, th, thead, tr {
 table th, td{
     color:#191919;
 }
+
 form{
     width: fit-content;
     align-items: center;
@@ -309,7 +283,6 @@ form{
 
 .principal-details{
     background-color:rgb(204, 223, 220);
-    /*margin-right: 20px;*/
     display: flex;
     flex-direction: row;
 }
@@ -329,10 +302,7 @@ form{
 .principal-stats{
     background-color:rgb(204, 223, 220);
 }
-.table{
-    padding-top:40px;
-    padding-bottom:40px;
-}
+
 form fieldset label{
     font-weight: bold;
 }
@@ -365,10 +335,8 @@ div.card{
 }
 
 .card-detail>img{
-    /*height:400px;*/
     object-fit: cover;
     display: flex;
-    
     align-self: center;
     border: solid red 2px;
 }
@@ -414,6 +382,9 @@ div.card{
 
 fieldset{
     margin-left:20vh!important;
+}
+#stats{
+    padding-top:40px;
 }
 /*----------MEDIA QUERIES----------*/
 /*PANTALLA GRANDE*/

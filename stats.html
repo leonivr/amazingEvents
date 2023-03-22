@@ -49,8 +49,9 @@
             <a class="right boton" href="./home.html">❯</a>
     </div>
     <div class="principal-stats">
-        <main>
+        <main id="stats">
           <table class="table table-secondary table-bordered">
+            <thead>
               <tr>
                 <th colspan="3">Events Statistics</th>
               </tr>
@@ -64,34 +65,29 @@
                 <td id="lowest-att"></td>
                 <td id="capacity"></td>
               </tr>
+            </thead>
           </table>
           <table class="table table-secondary table-bordered">
             <thead>
-              <tr>
-                <th colspan="3">Upcoming events statistics by category</th>
-              </tr>
-              <tr>
+                <tr>
+                  <th colspan="3">Upcoming events statistics by category</th>
+                </tr>
                 <th>Categories</th>
                 <th>Revenues</th>
                 <th>Percentage of attendance</th>
-              </tr>
             </thead>
             <tbody id="upcoming"></tbody>
           </table>
-          <table class="table table-secondary table-bordered" >
+          <table class="table table-secondary table-bordered">
             <thead>
-              <tr>
-                <th colspan="3">Past events statistics by category</th>
-              </tr>
-              <tr>
+                <tr>
+                    <th colspan="3">Past events statistics by category</th>
+                </tr>
                 <th>Categories</th>
                 <th>Revenues</th>
                 <th>Percentage of attendance</th>
-              </tr>
             </thead>
-            <tbody id="past">
-
-            </tbody>
+            <tbody id="past"></tbody>
           </table>
         </main>
     </div>
