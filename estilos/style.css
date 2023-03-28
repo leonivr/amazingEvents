@@ -3,10 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.navbar-toggler{
+    background-color:unset!important;
+    background-color: aliceblue!important;
+}
 body{
-    overflow-x: hidden;
+    overflow-x: visible;
     overflow-y: visible;
-    scroll-behavior:smooth;
+    /*scroll-behavior:smooth;*/
 }
 .header {
     position: relative;
@@ -19,9 +24,9 @@ nav > div> img {
     padding: 5px;
     width: 100px;
     margin-left:30px;
-    display:inline-block;
+    display:flex;
+    flex-direction: column;
 }
-
 #logo{
     display: block;
     width: 100%;
@@ -38,7 +43,6 @@ nav > div> img {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 80px;
-    margin-top:2px;
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
@@ -47,14 +51,13 @@ nav > div> img {
 
 .right,
 .left {
-    border-radius: 50%;
     width: 50px;
 }
 a.left,a.right{
     font-size:xx-large;
     text-decoration: none;
     align-self:center;
-
+    border-radius: 0px;
 }
 .form-control {
     max-width: fit-content;
@@ -178,16 +181,17 @@ h4 {
 
 ul > li.nav-item{
     border: solid 2px gray;
-    background-color: springgreen;
+    border-radius: 20px;
     margin: 10px;
     padding: 0px;
     font-weight: bold;
     display: flex;
     width: fit-content;
 }
+
 .navbar-brand{
     margin-left: 10px;
-    font-size: medium!important;  
+    font-size: medium!important;
 }
 
 #redes{
@@ -198,7 +202,7 @@ ul > li.nav-item{
     width: 40px;
 }
 a.active{
-    color:blue;
+    color:chartreuse;
 }
 
 #formulario{
@@ -236,6 +240,8 @@ input#submit{
 main#stats{
     display:grid; 
     justify-content: center;
+    margin-left:10px;
+    margin-right: 10px;
 }
 
 tbody, td, tfoot, th, thead, tr {
@@ -270,7 +276,7 @@ form{
     margin-left: unset;
 }
 .col>img{
-    object-fit: contain;/**/
+    object-fit: contain;
     margin-right: 40px;
 }
 
@@ -339,6 +345,7 @@ div.card{
     display: flex;
     align-self: center;
     border: solid red 2px;
+    
 }
 .card-detail{
     display: flex;
@@ -353,6 +360,7 @@ div.card{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    
 }
 
 .card-body.details{
@@ -386,10 +394,24 @@ fieldset{
 #stats{
     padding-top:40px;
 }
-/*----------MEDIA QUERIES----------*/
+#upcoming-banner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 80px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        
+}
+ul > li :hover{
+    background-color: orange!important;     
+}
+
+/*--------------------------------------MEDIA QUERIES-------------------------*/
 /*PANTALLA GRANDE*/
 
-/*@media screen and (min-width:700px)  {
+@media screen and (min-width:768px)  {
     .container-sm ul{
         justify-content: space-around;
         display: flex;
@@ -401,17 +423,21 @@ fieldset{
         display: inline-flex;
         position: relative;
     }   
-}*/
-
-@media screen and (min-width:250px) and (max-width:350px){
+}
+/*----------------------------------------------------------------------*/
+@media screen and (min-width:200px) and (max-width:550px){
 
     body{
-        display: grid;
+        display: flex;
+        flex-direction: column;
     }
     .banner{
-        gap: 30px;
-       display: grid;
-       justify-self: center;
+       gap: 15px;
+       display: flex;
+       flex-wrap: nowrap;
+       padding-left: 15px;
+       padding-right: 15px;
+       justify-content: space-around;
     }
 
     .banner > h1{
@@ -420,5 +446,28 @@ fieldset{
 
     fieldset{
         margin-left:10px!important;
+        gap: 15px;
+        width: 77%;
+    }
+    .container-sm{
+        display: flex;
+        flex-direction: column;
+    }
+    div.search{
+        margin-right: 0.5rem;
+    }
+    .card{
+        width: unset!important;
+    }
+    #main-contact {
+        width: 100%;
+        margin-left: -25px;
+        padding-bottom: 30px;
+        display: grid;
+    }
+    
+    .navbar-toggler{
+        background-color:unset!important;
+        background-color: aliceblue!important;
     }
 }

@@ -38,7 +38,8 @@ function renderSearch(){
         console.log(resultados);
         return filtro;
       })
-    }  
+    }
+     
 }
 function getChequeados(){
   let catchecked= [];
@@ -77,7 +78,7 @@ function getChequeados(){
   
     let btnbusqueda =document.querySelector('.btn.btn-outline-success');
     btnbusqueda.disabled=true;
-    let cajabusqueda = document.querySelector('.form-control');
+    cajabusqueda = document.querySelector('.form-control');
     cajabusqueda.onkeyup= (e) =>{
       //e.preventDefault();
       let texto=cajabusqueda.value;
