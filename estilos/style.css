@@ -408,6 +408,9 @@ ul > li :hover{
     background-color: orange!important;     
 }
 
+input#nombre,input#email,input#submit, textarea{
+    border-radius: 10px;
+}
 /*--------------------------------------MEDIA QUERIES-------------------------*/
 /*PANTALLA GRANDE*/
 
